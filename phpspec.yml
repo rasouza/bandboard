@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Bandboard
+        psr4_prefix: Bandboard
+        src_path: app
