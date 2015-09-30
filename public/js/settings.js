@@ -11,15 +11,15 @@ $(document).ready(function(){
     
     $.get("/assets/settings.html",function(data){
         $("body").append(data);
-        
+
         $(".ss_theme[data-value="+theme+"]").addClass('active');
 
-        if(theme != 'default') 
+        if(theme != 'default')
             $(".container").addClass(theme);
-        
+
         $("#ss_backgrounds").html(buildBackgroundsList(theme,themeToBackground));
 
-        $(".ss_background[data-value="+$("body").attr("class")+"]").addClass('active');        
+        $(".ss_background[data-value="+$("body").attr("class")+"]").addClass('active');
     });
     
     $(".site-settings-button").live("click",function(){
