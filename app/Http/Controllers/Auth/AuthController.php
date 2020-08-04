@@ -3,6 +3,7 @@
 namespace Bandboard\Http\Controllers\Auth;
 
 use Bandboard\User;
+use Illuminate\Support\Facades\Request;
 use Validator;
 use Bandboard\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -25,11 +26,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    /**
-     * Create a new authentication controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);

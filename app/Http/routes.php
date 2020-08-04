@@ -14,7 +14,7 @@
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
-    Route::get('teste', 'HomeController@create');
+    Route::post('/mensagem', 'HomeController@sendMessage');
 });
 
 // Authentication routes...

@@ -21,18 +21,7 @@
                 </div>
             </div>
             <div class="content messages npr npb npt">
-                <div class=scroll style=height:250px>
-                    <div class=messages-item>
-                        <img src="{{ asset('img/example/user/dmitry_s.jpg') }}" class="img-circle img-thumbnail" />
-                        <div class=messages-item-text>Duis eu libero pellentesque, dapibus ante eu, vehicula leo. Nulla gravida rutrum neque</div>
-                        <div class=messages-item-date>14:33 30.08.2013</div>
-                    </div>
-                    <div class="messages-item inbox">
-                        <img src="{{ asset('img/example/user/olga_s.jpg') }}" class="img-circle img-thumbnail" />
-                        <div class=messages-item-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum nisl velit</div>
-                        <div class=messages-item-date>14:32 30.08.2013</div>
-                    </div>
-                </div>
+                <div class=scroll style=height:250px></div>
             </div>
             <div class=footer>
                 <div class=input-group>

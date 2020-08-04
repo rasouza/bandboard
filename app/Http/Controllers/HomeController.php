@@ -5,6 +5,7 @@ namespace Bandboard\Http\Controllers;
 use Illuminate\Http\Request;
 use Bandboard\Http\Requests;
 use Bandboard\Http\Controllers\Controller;
+use LRedis;
 
 class HomeController extends Controller
 {
@@ -82,5 +83,12 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function sendMessage(Request $request)
+    {
+        $data = [ 'message' => $request->input('message'), 'avatar' => $request->input('avatar') ];
+        $redis = LRedis::connection();
+        $redis->publish('message', json_encode($data));
     }
 }

@@ -4,6 +4,7 @@
 <head>
     <title>Bandboard</title>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel=icon type=image/ico href="favicon.html" />
     <link href="{{ asset('css/stylesheets.css') }}" rel=stylesheet type=text/css />
     <script type=text/javascript src="{{ asset('js/plugins/jquery/jquery.min.js') }}"></script>

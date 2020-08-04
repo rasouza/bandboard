@@ -19,6 +19,7 @@
 <body class=bg-img-num1>
 <div class=container>
     <div class=login-block>
+        {!! Form::open(array('action' => 'Auth\AuthController@postLogin')) !!}
         <div class="block block-transparent">
             <div class=head>
                 <div class=user>
@@ -35,7 +36,7 @@
                             <div class=input-group-addon>
                                 <span class=icon-user></span>
                             </div>
-                            <input type=text class=form-control placeholder="Login" />
+                            <input name="email" type=text class=form-control placeholder="Login" />
                         </div>
                     </div>
                 </div>
@@ -45,13 +46,14 @@
                             <div class=input-group-addon>
                                 <span class=icon-key></span>
                             </div>
-                            <input type=password class=form-control placeholder="Password" />
+                            <input name="password" type=password class=form-control placeholder="Password" />
                         </div>
                     </div>
                 </div>
                 <div class=form-row>
                     <div class=col-md-6> <a href="{{ action('Auth\AuthController@getRegister') }}" class="btn btn-default btn-block btn-clean">Register</a> </div>
-                    <div class=col-md-6> <a href=# class="btn btn-default btn-block btn-clean">Log In</a> </div>
+
+                    <div class=col-md-6> {!! Form::submit('Login', ['class' => 'btn btn-default btn-block btn-clean']) !!} </div>
                 </div>
                 <div class=form-row>
                     <div class=col-md-12> <a href=# class="btn btn-link btn-block">Forgot your password?</a> </div>
@@ -69,6 +71,7 @@
                 </div>
             </div>
         </div>
+        {!! Form::close() !!}
     </div>
 </div>
 </body>
